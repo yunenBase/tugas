@@ -36,7 +36,7 @@ class ForgotPage extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      "Sign Up",
+                      "Forgot Password",
                       style: TextStyle(
                           fontFamily: 'Sen',
                           fontWeight: FontWeight.w700,
@@ -44,7 +44,7 @@ class ForgotPage extends StatelessWidget {
                           fontSize: 30),
                     ),
                     Text(
-                      "Please sign up to get started",
+                      "Please sign up to your existing account",
                       style: TextStyle(
                           fontFamily: 'Sen',
                           fontWeight: FontWeight.w100,

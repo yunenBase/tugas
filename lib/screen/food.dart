@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/searchPage.dart';
 
 import '../components/tombolMelayang.dart';
@@ -62,7 +63,7 @@ class _FoodState extends State<Food> {
                   warnaButton: Colors.white,
                   warnaIcon: Colors.black,
                   icon: Icons.arrow_back,
-                  pageBuilder: () => RestaurantView(),
+                  pageBuilder: () => HomePage(),
                 ),
                 Container(
                   height: 40,

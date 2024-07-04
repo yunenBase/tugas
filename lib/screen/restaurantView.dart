@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tugas/packages/imageSlideshow.dart';
+import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/myCartPage.dart';
-import 'package:tugas/screen/searchPage.dart';
 
 import '../components/menuMakanan.dart';
 import '../components/tombolMelayang.dart';
@@ -48,7 +48,7 @@ class RestaurantView extends StatelessWidget {
                   top: MediaQuery.of(context).size.height * 0.05,
                   left: MediaQuery.of(context).size.width * 0.025,
                   child: TombolMelayang(
-                    pageBuilder: () => SearchPage(),
+                    pageBuilder: () => HomePage(),
                     warnaButton: Colors.white,
                     warnaIcon: Colors.black,
                     icon: Icons.arrow_back,

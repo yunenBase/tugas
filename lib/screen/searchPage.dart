@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tugas/components/menuMakanan.dart';
 import 'package:tugas/components/searchBar.dart';
 import 'package:tugas/components/tombolMelayang.dart';
 import 'package:tugas/screen/food.dart';
+import 'package:tugas/screen/restaurantView.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -114,10 +116,13 @@ class _SearchPageState extends State<SearchPage> {
                   ),
                   Column(
                     children: [
-                      SuggestedRestaurant(
-                        img: 'assets/images/burger2.jpg',
-                        namaResto: "Pansi Restaurant",
-                        rating: "4.7",
+                      InkWell(
+                        onTap: () => Get.to(RestaurantView()),
+                        child: SuggestedRestaurant(
+                          img: 'assets/images/burger2.jpg',
+                          namaResto: "Spicy Restaurant",
+                          rating: "4.7",
+                        ),
                       ),
                       Divider(
                         color: Colors.grey, // Warna garis

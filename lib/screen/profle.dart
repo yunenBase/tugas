@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/order.dart';
 import 'package:tugas/screen/personal.dart';
 
@@ -25,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),
           onPressed: () {
-            // Handle back button press
+            Get.to(HomePage());
           },
         ),
         actions: [
@@ -47,12 +48,13 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.width * 0.2,
-                        width: MediaQuery.of(context).size.width * 0.2,
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 198, 174, 1),
-                          shape: BoxShape.circle,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.asset(
+                          'assets/images/wf.jpg',
+                          fit: BoxFit.cover,
+                          height: MediaQuery.of(context).size.width * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.2,
                         ),
                       ),
                       const SizedBox(
@@ -62,14 +64,14 @@ class ProfileScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Vishal Khadok',
+                            'Dinda',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
-                            'I love fast food',
+                            '4 healthy 5 perfect',
                             style: TextStyle(
                               color: Colors.grey,
                             ),
@@ -97,8 +99,8 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/personal3.png', // Ganti dengan path gambar yang sesuai
-                                width: 30, // Atur lebar gambar
-                                height: 30, // Atur tinggi gambar
+                                width: 20, // Atur lebar gambar
+                                height: 20, // Atur tinggi gambar
                                 fit: BoxFit
                                     .contain, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -125,8 +127,8 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/alamat.png', // Ganti dengan path gambar yang sesuai
-                                width: 30, // Atur lebar gambar
-                                height: 30, // Atur tinggi gambar
+                                width: 20, // Atur lebar gambar
+                                height: 20, // Atur tinggi gambar
                                 fit: BoxFit
                                     .contain, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -171,8 +173,8 @@ class ProfileScreen extends StatelessWidget {
                               children: [
                                 Image.asset(
                                   'assets/images/cart2.png', // Ganti dengan path gambar yang sesuai
-                                  width: 30, // Atur lebar gambar
-                                  height: 30,
+                                  width: 20, // Atur lebar gambar
+                                  height: 20,
                                   fit: BoxFit
                                       .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                                 ),
@@ -200,8 +202,8 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/fav.png', // Ganti dengan path gambar yang sesuai
-                                width: 30, // Atur lebar gambar
-                                height: 30,
+                                width: 20, // Atur lebar gambar
+                                height: 20,
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -228,9 +230,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/notif.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -257,9 +259,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/pay.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -302,9 +304,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/faq.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -331,9 +333,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/user.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -360,9 +362,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/setting.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),
@@ -405,9 +407,9 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                 'assets/images/logout.png',
-                                width: 30, // Atur lebar gambar
+                                width: 20, // Atur lebar gambar
                                 height:
-                                    30, // Ganti dengan path gambar yang sesuai
+                                    20, // Ganti dengan path gambar yang sesuai
                                 fit: BoxFit
                                     .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                               ),

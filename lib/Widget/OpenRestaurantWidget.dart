@@ -14,7 +14,7 @@ class OpenRestaurantWidget extends StatelessWidget {
             _buildRestaurantItem(
               context,
               "assets/images/openGardenR.jpg",
-              "Rose Garden Restaurant",
+              "Spicy Restaurant",
               "Burger - Chicken - Rice - Wings",
             ),
           ],

@@ -1,6 +1,8 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tugas/screen/profle.dart';
 
 class PersonalPage extends StatelessWidget {
   const PersonalPage({Key? key}) : super(key: key);
@@ -13,7 +15,7 @@ class PersonalPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back button press
+            Get.to(ProfileScreen());
           },
         ),
         actions: [
@@ -42,12 +44,13 @@ class PersonalPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.width * 0.2,
-                        width: MediaQuery.of(context).size.width * 0.2,
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 198, 174, 1),
-                          shape: BoxShape.circle,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.asset(
+                          'assets/images/wf.jpg',
+                          fit: BoxFit.cover,
+                          height: MediaQuery.of(context).size.width * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.2,
                         ),
                       ),
                       const SizedBox(
@@ -57,14 +60,14 @@ class PersonalPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Vishal Khadok',
+                            'Dinda',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
-                            'I love fast food',
+                            '4 healthy 5 perfect',
                             style: TextStyle(
                               color: Colors.grey,
                             ),
@@ -94,8 +97,9 @@ class PersonalPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image.asset(
                                   'assets/images/personal2.png', // Ganti dengan path gambar yang sesuai
-                                  fit: BoxFit
-                                      .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
+                                  fit: BoxFit.cover,
+                                  width: 30,
+                                  height: 30,
                                 ),
                               ),
                               const SizedBox(
@@ -105,14 +109,14 @@ class PersonalPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "FULL NAME",
+                                    "Full Name",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
-                                    "Vishal Khadok",
+                                    "Dinda Mestika",
                                     style: TextStyle(
                                       fontSize: 14.0,
                                     ),
@@ -130,8 +134,10 @@ class PersonalPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image.asset(
                                   'assets/images/address.png', // Ganti dengan path gambar yang sesuai
-                                  fit: BoxFit
-                                      .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
+                                  fit: BoxFit.cover,
+                                  width: 30,
+                                  height:
+                                      30, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                                 ),
                               ),
                               const SizedBox(
@@ -141,7 +147,7 @@ class PersonalPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "EMAIL",
+                                    "Email",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
@@ -165,7 +171,10 @@ class PersonalPage extends StatelessWidget {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image.asset(
-                                  'assets/images/address.png', // Ganti dengan path gambar yang sesuai
+                                  'assets/images/address.png',
+                                  width: 30,
+                                  height:
+                                      30, // Ganti dengan path gambar yang sesuai
                                   fit: BoxFit
                                       .cover, // Atur cara gambar ditampilkan (sesuaikan dengan kebutuhan Anda)
                                 ),
@@ -177,7 +186,7 @@ class PersonalPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "PHONE NUMBER",
+                                    "Phone Number",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
