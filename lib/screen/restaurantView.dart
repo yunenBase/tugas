@@ -6,8 +6,8 @@ import '../components/menuMakanan.dart';
 import '../components/tombolMelayang.dart';
 import '../components/valueItem.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class RestaurantView extends StatelessWidget {
+  const RestaurantView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   child: TombolMelayang(
                     warnaButton: Colors.white,
                     warnaIcon: Colors.black,
-                    pageBuilder: () => HomePage(),
+                    pageBuilder: () => RestaurantView(),
                     icon: Icons.menu,
                   ),
                 ),

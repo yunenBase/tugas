@@ -62,7 +62,7 @@ class _FoodState extends State<Food> {
                   warnaButton: Colors.white,
                   warnaIcon: Colors.black,
                   icon: Icons.arrow_back,
-                  pageBuilder: () => HomePage(),
+                  pageBuilder: () => RestaurantView(),
                 ),
                 Container(
                   height: 40,
@@ -216,7 +216,8 @@ class _FoodState extends State<Food> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                            MaterialPageRoute(
+                                builder: (context) => RestaurantView()),
                           );
                         },
                         child: ClipRRect(

@@ -16,7 +16,7 @@ const Color cardColor = Color(0xff98A8B8);
 const Color appBarIconsColor = Color(0xFF181C2E);
 const Color whiteIconColor = Color(0xFFFFFFFF);
 const Color orangeIconColor = Color(0xFFFF7622);
-  
+
 //BUTTON
 const Color buttonColor = Color(0xFFFF7622);
 const Color buttonTextColor = Color(0xffffffff);
@@ -45,7 +45,8 @@ const Color chipTextColor = Colors.white;
 
 //Typograph
 //Headline
-TextStyle boldHeadline1 = const TextStyle(fontFamily: 'Sen', fontWeight: FontWeight.w700, fontSize: 30);
+TextStyle boldHeadline1 = const TextStyle(
+    fontFamily: 'Sen', fontWeight: FontWeight.w700, fontSize: 30);
 TextStyle boldHeadline2 = boldHeadline1.copyWith(fontSize: 20);
 TextStyle boldHeadline3 = boldHeadline1.copyWith(fontSize: 18);
 TextStyle boldHeadline4 = boldHeadline1.copyWith(fontSize: 14);
