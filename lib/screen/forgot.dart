@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:tugas/components/tombolMelayang.dart';
 import 'package:flutter/material.dart';
-import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/login.dart';
 
 class ForgotPage extends StatelessWidget {

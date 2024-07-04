@@ -6,7 +6,6 @@ import 'package:tugas/screen/searchPage.dart';
 
 import '../components/menuMakanan.dart';
 import '../components/tombolMelayang.dart';
-import '../components/valueItem.dart';
 
 class RestaurantView extends StatelessWidget {
   const RestaurantView({super.key});

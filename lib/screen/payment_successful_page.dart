@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tugas/screen/order.dart';
 
 class PaymentSuccessfulPage extends StatelessWidget {
   @override
@@ -18,9 +20,13 @@ class PaymentSuccessfulPage extends StatelessWidget {
                 width: 200,
                 height: 200,
                 decoration: BoxDecoration(
-                  color: Color(0xFF98A8B8),
+                  // color: Color(0xFF98A8B8),
                   borderRadius: BorderRadius.circular(
                       30), // Menjadikan sudut container menjadi circular
+                ),
+                child: Image.asset(
+                  'assets/images/success.png',
+                  fit: BoxFit.cover,
                 ),
               ),
               SizedBox(height: 32.0),
@@ -48,7 +54,7 @@ class PaymentSuccessfulPage extends StatelessWidget {
                         10), // Membuat tombol dengan sudut melengkung
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () => Get.to(OrderPage()),
                 child: const Text("Track Order"),
               ),
             ],

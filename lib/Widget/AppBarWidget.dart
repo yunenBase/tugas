@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tugas/screen/profle.dart';
 
 class AppBarWidget extends StatelessWidget {
   @override
@@ -25,7 +27,9 @@ class AppBarWidget extends StatelessWidget {
                 ),
               ],
             ),
-            child: Icon(Icons.menu),
+            child: InkWell(
+                onTap: () => Get.to(ProfileScreen()),
+                child: Icon(Icons.person)),
           ),
         ),
         Expanded(
