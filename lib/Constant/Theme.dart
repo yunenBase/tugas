@@ -11,16 +11,18 @@ const Color scaffoldBackgroundColor = Colors.white;
 const Color backgroundColor = Color(0xffffffff);
 const Color dividerColor = Color(0xff686868);
 const Color cardColor = Color(0xff98A8B8);
+const Color fieldColor = Color(0xFFF0F5FA);
 
 //ICONS
 const Color appBarIconsColor = Color(0xFF181C2E);
 const Color whiteIconColor = Color(0xFFFFFFFF);
 const Color orangeIconColor = Color(0xFFFF7622);
+const Color profileImage = Color(0xFFFFBF6D);
   
 //BUTTON
 const Color buttonColor = Color(0xFFFF7622);
 const Color buttonTextColor = Color(0xffffffff);
-const Color buttonDisabledColor = Colors.white;
+const Color buttonDisabledColor = Color(0xFFF0F5FA);
 const Color buttonDisabledTextColor = Color(0xFFFF7622);
 const Color buttonDisabledBorder = Color(0xFFFF7622);
 
@@ -54,16 +56,18 @@ TextStyle headline1 = const TextStyle(fontFamily: 'Sen', fontSize: 20);
 TextStyle headline2 = headline1.copyWith(fontSize: 18);
 
 //Body
-TextStyle body1 = headline1.copyWith(fontSize: 16);
-TextStyle body2 = headline1.copyWith(fontSize: 14);
+TextStyle body1 = headline1.copyWith(fontSize: 16, color: bodyTextColor);
+TextStyle body2 = body1.copyWith(fontSize: 14);
 TextStyle boldBody = boldHeadline1.copyWith(fontSize: 16);
 
 //Button
-TextStyle submitText = boldHeadline4;
-TextStyle smallSubmit = boldHeadline1.copyWith(fontSize: 12);
-TextStyle chips = body2;
+TextStyle submitText = boldHeadline4.copyWith(fontSize: 16,color: buttonTextColor);
+TextStyle smallSubmit = submitText.copyWith(fontSize: 12);
+TextStyle cancelText = smallSubmit.copyWith(color: buttonDisabledTextColor);
+TextStyle chipsEnabled = body2;
+TextStyle chipsDisabled = body2.copyWith(color: buttonDisabledTextColor);
 
 //etc
-TextStyle hintText = headline1.copyWith(fontSize: 14);
-TextStyle captionText = headline1.copyWith(fontSize: 12);
-TextStyle appBarText = headline1.copyWith(fontSize: 17);
+TextStyle hintText = headline1.copyWith(fontSize: 14,color: hintTextColor);
+TextStyle captionText = headline1.copyWith(fontSize: 12,color: captionTextColor);
+TextStyle appBarText = headline1.copyWith(fontSize: 17, color: appBarIconsColor);
