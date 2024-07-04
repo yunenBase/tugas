@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:tugas/screen/order.dart';
 
@@ -25,7 +26,7 @@ class PaymentSuccessfulPage extends StatelessWidget {
                       30), // Menjadikan sudut container menjadi circular
                 ),
                 child: Image.asset(
-                  'assets/images/success.png',
+                  'assets/images/success1.png',
                   fit: BoxFit.cover,
                 ),
               ),

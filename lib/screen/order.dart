@@ -72,13 +72,13 @@ class OrderPage extends StatelessWidget {
                             Divider(),
                             Row(
                               children: [
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromRGBO(152, 168, 184, 1),
-                                    borderRadius: BorderRadius.circular(
-                                        20.0), // Atur radius sesuai kebutuhan
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/pizza.jpg',
+                                    fit: BoxFit.cover,
+                                    height: 100,
+                                    width: 100,
                                   ),
                                 ),
                                 Padding(
@@ -220,13 +220,13 @@ class OrderPage extends StatelessWidget {
                             Divider(),
                             Row(
                               children: [
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromRGBO(152, 168, 184, 1),
-                                    borderRadius: BorderRadius.circular(
-                                        20.0), // Atur radius sesuai kebutuhan
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/burger4.jpg',
+                                    fit: BoxFit.cover,
+                                    height: 100,
+                                    width: 100,
                                   ),
                                 ),
                                 Padding(
@@ -368,13 +368,13 @@ class OrderPage extends StatelessWidget {
                             Divider(),
                             Row(
                               children: [
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromRGBO(152, 168, 184, 1),
-                                    borderRadius: BorderRadius.circular(
-                                        20.0), // Atur radius sesuai kebutuhan
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/starbucks.jpg',
+                                    fit: BoxFit.cover,
+                                    height: 100,
+                                    width: 100,
                                   ),
                                 ),
                                 Padding(
