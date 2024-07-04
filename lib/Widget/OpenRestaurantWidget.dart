@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tugas/screen/restaurantView.dart';
 
 class OpenRestaurantWidget extends StatelessWidget {
   @override
@@ -26,12 +28,7 @@ class OpenRestaurantWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10),
       child: InkWell(
-        // onTap: () => Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => RestaurantView(),
-        //   ),
-        // ),
+        onTap: () => Get.to(RestaurantView()),
         child: Container(
           width: 380,
           decoration: BoxDecoration(

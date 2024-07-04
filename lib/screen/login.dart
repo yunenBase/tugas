@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/forgot.dart';
 import 'package:tugas/screen/signup.dart';
@@ -134,14 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ],
                       ),
                       TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ForgotPage(),
-                            ),
-                          );
-                        },
+                        onPressed: () => Get.to(ForgotPage()),
                         child: Text(
                           'Forgot Password',
                           style: TextStyle(
@@ -158,14 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 60,
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HomePage(),
-                            ),
-                          );
-                        },
+                        onPressed: () => Get.to(HomePage()),
                         child: Text('LOG IN'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFFFF7622),

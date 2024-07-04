@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas/components/tombolMelayang.dart';
-import 'package:tugas/screen/HomePage.dart';
+import 'package:tugas/screen/payment_method_page.dart';
 import 'package:tugas/screen/restaurantView.dart';
 import 'package:get/get.dart';
 
@@ -93,6 +93,10 @@ class MyCartPage extends StatelessWidget {
                                   TextField(
                                     decoration: InputDecoration(
                                       filled: true,
+                                      hintText: "example@mail.com",
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey,
+                                      ),
                                       fillColor: Color(0xFFE6EEF1),
                                       border: OutlineInputBorder(
                                         borderSide: BorderSide.none,
@@ -144,16 +148,8 @@ class MyCartPage extends StatelessWidget {
                                   Container(
                                     width: double.infinity,
                                     child: ElevatedButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) {
-                                              return HomePage();
-                                            },
-                                          ),
-                                        );
-                                      },
+                                      onPressed: () =>
+                                          Get.to(PaymentMethodPage()),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Color(0xFFFF742B),
                                         padding: const EdgeInsets.symmetric(
@@ -164,7 +160,7 @@ class MyCartPage extends StatelessWidget {
                                         ),
                                       ),
                                       child: const Text(
-                                        'SIGN UP',
+                                        'Pay & Confirm',
                                         style: TextStyle(
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.bold,
@@ -224,7 +220,7 @@ class MyCartPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Spicy Burger",
+                                  "Burger Biasa",
                                   style: TextStyle(
                                     fontFamily: 'Sen',
                                     fontSize: 20,

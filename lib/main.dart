@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tugas/screen/myCartPage.dart';
+import 'package:get/get.dart';
+import 'package:tugas/screen/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,9 +9,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyCartPage(),
+      home: SplashScreen(),
     );
   }
 }

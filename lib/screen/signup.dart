@@ -1,6 +1,7 @@
+import 'package:get/get.dart';
 import 'package:tugas/components/tombolMelayang.dart';
 import 'package:flutter/material.dart';
-import 'package:tugas/screen/HomePage.dart';
+import 'package:tugas/screen/login.dart';
 import 'package:tugas/screen/restaurantView.dart';
 
 // void main() {
@@ -189,16 +190,7 @@ class SignupPage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return HomePage();
-                            },
-                          ),
-                        );
-                      },
+                      onPressed: () => Get.to(LoginScreen()),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFFF742B),
                         padding: const EdgeInsets.symmetric(vertical: 16.0),

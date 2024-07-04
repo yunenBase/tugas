@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tugas/packages/imageSlideshow.dart';
+import 'package:tugas/screen/myCartPage.dart';
 import 'package:tugas/screen/searchPage.dart';
 
 import '../components/menuMakanan.dart';
@@ -72,24 +74,78 @@ class RestaurantView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Value(
-                        icon: Icons.star_border,
-                        deskripsi: "5.0",
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: Icon(
+                              Icons.star_border,
+                              color: Color.fromRGBO(255, 118, 34, 1),
+                              size: 26,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 5.0,
+                          ),
+                          Text(
+                            "5.5",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          )
+                        ],
                       ),
                       SizedBox(
                         width: 20.0,
                       ),
-                      Value(
-                        icon: Icons.delivery_dining_outlined,
-                        deskripsi: "Free",
-                      ),
                       SizedBox(
                         width: 20.0,
                       ),
-                      Value(
-                        icon: Icons.timer_outlined,
-                        deskripsi: "20 Min",
-                      )
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: Icon(
+                              Icons.delivery_dining_outlined,
+                              color: Color.fromRGBO(255, 118, 34, 1),
+                              size: 26,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 5.0,
+                          ),
+                          Text(
+                            "Free",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 20.0,
+                      ),
+                      const SizedBox(
+                        width: 20.0,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: Icon(
+                              Icons.access_time,
+                              color: Color.fromRGBO(255, 118, 34, 1),
+                              size: 26,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 5.0,
+                          ),
+                          Text(
+                            "20 Min",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ],
                   ),
                   Container(
@@ -177,7 +233,7 @@ class RestaurantView extends StatelessWidget {
                           gambarMakanan: 'assets/images/burger1.jpg',
                           namaMakanan: "Burger Ferguson",
                           deskripsiMakanan: "Spicy Restaurant",
-                          hargaMakanan: "Rp. 40",
+                          hargaMakanan: "\$ 40",
                         ),
                         SizedBox(
                           width: 20.0,
@@ -186,7 +242,7 @@ class RestaurantView extends StatelessWidget {
                           gambarMakanan: 'assets/images/burger2.jpg',
                           namaMakanan: "Burger Polos",
                           deskripsiMakanan: "Lumayan Enak",
-                          hargaMakanan: "Rp. 30",
+                          hargaMakanan: "\$ 30",
                         ),
                         SizedBox(
                           width: 20.0,
@@ -195,7 +251,7 @@ class RestaurantView extends StatelessWidget {
                           gambarMakanan: 'assets/images/burger4.jpg',
                           namaMakanan: "Burger Keju",
                           deskripsiMakanan: "Keju kejuan gitu",
-                          hargaMakanan: "Rp. 50",
+                          hargaMakanan: "\$ 50",
                         ),
                         SizedBox(
                           width: 20.0,
@@ -204,16 +260,89 @@ class RestaurantView extends StatelessWidget {
                           gambarMakanan: 'assets/images/burger5.jpg',
                           namaMakanan: "Burger McD",
                           deskripsiMakanan: "Sok Elite",
-                          hargaMakanan: "Rp. 60",
+                          hargaMakanan: "\$ 60",
                         ),
                         SizedBox(
                           width: 20.0,
                         ),
-                        ListMakanan(
-                          gambarMakanan: 'assets/images/burger3.jpg',
-                          namaMakanan: "Krabby Petty",
-                          deskripsiMakanan: "Bikini Bottom",
-                          hargaMakanan: "Rp. 99999",
+                        Container(
+                          width: 180,
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.1),
+                                spreadRadius: 2,
+                                blurRadius: 10,
+                                offset: Offset(0, 5),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(20),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/burger3.jpg',
+                                  fit: BoxFit.cover,
+                                  width: 140,
+                                  height: 85,
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 7),
+                                child: Text(
+                                  'Burger Biasa',
+                                  style: TextStyle(
+                                      fontFamily: 'Sen',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Text(
+                                'Enak',
+                                style: TextStyle(
+                                  fontFamily: 'Sen',
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '\$60',
+                                      style: TextStyle(
+                                          fontFamily: 'Sen',
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(40),
+                                        color: Color.fromRGBO(245, 141, 29, 1),
+                                      ),
+                                      padding: EdgeInsets.all(9),
+                                      child: InkWell(
+                                        onTap: () => Get.to(MyCartPage()),
+                                        child: Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 17,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

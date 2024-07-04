@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tugas/screen/food.dart';
 
 class CategoriesWidget extends StatelessWidget {
@@ -62,10 +63,7 @@ class CategoriesWidget extends StatelessWidget {
   Widget _buildCategoryItem(BuildContext context, String imagePath,
       String title, String price, String quantity) {
     return InkWell(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Food()),
-      ),
+      onTap: () => Get.to(Food()),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Container(
