@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:tugas/Constant/Theme.dart';
 import 'package:tugas/screen/HomePage.dart';
 import 'package:tugas/screen/forgot.dart';
 import 'package:tugas/screen/signup.dart';
+import 'package:tugas/Constant/validation.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -41,13 +43,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SizedBox(height: 0),
-                  Text(
-                    'Please sign in to your existing account',
-                    style: TextStyle(
-                        fontFamily: 'Sen',
-                        fontWeight: FontWeight.w100,
-                        color: Colors.white,
-                        fontSize: 18),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Please sign in to your existing account',
+                      style: body1.copyWith(color: buttonTextColor),
+                    ),
                   ),
                 ],
               ),
@@ -64,14 +65,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Text(
                     "EMAIL",
-                    style: TextStyle(fontSize: 15),
+                    style: body1,
                   ),
                   SizedBox(
                     height: 10.0,
                   ),
-                  TextField(
+                  TextFormField(
+                    validator: (val) => Validators.ValidEmail(val!),
                     decoration: InputDecoration(
                       hintText: 'example@gmail.com',
+                      hintStyle: hintText,
                       filled: true,
                       fillColor: Color(0xFFF0F5FA),
                       border: OutlineInputBorder(
@@ -85,11 +88,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 30),
                   Text(
                     "PASSWORD",
-                    style: TextStyle(
-                      fontSize: 15.0,
-                    ),
+                    style: body1,
                   ),
-                  TextField(
+                  TextFormField(
+                    validator: (val) => Validators.ValidPass(val!),
                     controller: _passwordController,
                     obscureText: _obscureText,
                     decoration: InputDecoration(
@@ -138,10 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () => Get.to(ForgotPage()),
                         child: Text(
                           'Forgot Password',
-                          style: TextStyle(
-                            color: Colors.orange,
-                            fontSize: 14,
-                          ),
+                          style: body2.copyWith(color: textButtonColor),
                         ),
                       ),
                     ],

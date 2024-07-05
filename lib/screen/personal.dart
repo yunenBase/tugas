@@ -1,8 +1,9 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tugas/screen/profle.dart';
+import 'package:tugas/screen/edit_profile.dart';
+import 'package:tugas/screen/profile.dart';
 
 class PersonalPage extends StatelessWidget {
   const PersonalPage({Key? key}) : super(key: key);
@@ -21,13 +22,20 @@ class PersonalPage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: RichText(
-              text: TextSpan(
-                text: "Edit",
-                style: TextStyle(
-                  fontSize: 16.0, // Ukuran teks
-                  color: Colors.orange, // Warna teks
-                  decoration: TextDecoration.underline, // Garis bawah
+            child: GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (_) => editProfil()),
+              ),
+              child: RichText(
+                text: TextSpan(
+                  text: "Edit",
+                  style: TextStyle(
+                    fontSize: 16.0, // Ukuran teks
+                    color: Colors.orange, // Warna teks
+                    decoration: TextDecoration.underline, // Garis bawah
+                  ),
+
                 ),
               ),
             ),

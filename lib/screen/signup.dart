@@ -2,28 +2,7 @@ import 'package:get/get.dart';
 import 'package:tugas/components/tombolMelayang.dart';
 import 'package:flutter/material.dart';
 import 'package:tugas/screen/login.dart';
-import 'package:tugas/screen/restaurantView.dart';
-
-// void main() {
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Signup Page',
-//       theme: ThemeData(
-//         primarySwatch: Colors.orange,
-//         fontFamily: 'Poppins',
-//       ),
-//       home: const SignupPage(),
-//     );
-//   }
-// }
+import 'package:tugas/Constant/validation.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -48,7 +27,7 @@ class SignupPage extends StatelessWidget {
                       warnaButton: Colors.white,
                       warnaIcon: Colors.black,
                       icon: Icons.arrow_back,
-                      pageBuilder: () => RestaurantView(),
+                      pageBuilder: () => LoginScreen(),
                     ),
                   ],
                 ),
@@ -110,7 +89,8 @@ class SignupPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8.0),
-                  const TextField(
+                  TextFormField(
+                    validator: (val) => Validators.ValidName(val!),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFFE6EEF1),
@@ -130,7 +110,8 @@ class SignupPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8.0),
-                  const TextField(
+                  TextFormField(
+                    validator:(val) => Validators.ValidEmail(val!),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFFE6EEF1),
@@ -150,7 +131,8 @@ class SignupPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8.0),
-                  const TextField(
+                  TextFormField(
+                    validator:(val) => Validators.ValidPass(val!),
                     obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
@@ -172,7 +154,8 @@ class SignupPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8.0),
-                  const TextField(
+                  TextFormField(
+                    validator:(val) => Validators.ValidPass(val!),
                     obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
@@ -217,191 +200,3 @@ class SignupPage extends StatelessWidget {
     );
   }
 }
-
-
-// Center(
-//         child: SingleChildScrollView(
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             // mainAxisAlignment: MainAxisAlignment.center,
-//             children: <Widget>[
-//               TombolMelayang(
-//                 warnaButton: Colors.white,
-//                 warnaIcon: Colors.black,
-//                 icon: Icons.arrow_back,
-//                 pageBuilder: () => RestaurantView(),
-//               ),
-//               const SizedBox(height: 55.0),
-//               Center(
-//                 child: Column(
-//                   children: [
-//                     const Text(
-//                       'Sign Up',
-//                       textAlign: TextAlign.center,
-//                       style: TextStyle(
-//                         fontSize: 36.0,
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                     const SizedBox(height: 8.0),
-//                     const Text(
-//                       'Please sign up to get started',
-//                       textAlign: TextAlign.center,
-//                       style: TextStyle(
-//                         fontSize: 16.0,
-//                         fontWeight: FontWeight.normal,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                     const SizedBox(height: 70.0),
-//                     Container(
-//                       width: double.infinity, // Expand to full width
-//                       // height: double.infinity, // Expand to full width
-//                       // constraints: BoxConstraints(
-//                       //   minHeight: MediaQuery.of(context).size.height *
-//                       //       0.6, // At least 60% of the screen height
-//                       // ),
-//                       padding: const EdgeInsets.all(24.0),
-//                       decoration: BoxDecoration(
-//                         color:
-//                             const Color(0xFFF5F6FA), // Light background color
-//                         borderRadius: const BorderRadius.only(
-//                           topLeft: Radius.circular(16.0),
-//                           topRight: Radius.circular(16.0),
-//                         ),
-//                       ),
-//                       child: Column(
-//                         crossAxisAlignment: CrossAxisAlignment.start,
-//                         children: <Widget>[
-//                           const Text(
-//                             'NAME',
-//                             style: TextStyle(
-//                               color: Colors.black,
-//                               fontWeight: FontWeight.w200,
-//                             ),
-//                           ),
-//                           const SizedBox(height: 8.0),
-//                           const TextField(
-//                             decoration: InputDecoration(
-//                               filled: true,
-//                               fillColor: Color(0xFFE6EEF1),
-//                               hintText: 'Dinda Mestika',
-//                               border: OutlineInputBorder(
-//                                 borderSide: BorderSide.none,
-//                                 borderRadius:
-//                                     BorderRadius.all(Radius.circular(8.0)),
-//                               ),
-//                             ),
-//                           ),
-//                           const SizedBox(height: 16.0),
-//                           const Text(
-//                             'EMAIL',
-//                             style: TextStyle(
-//                               color: Colors.black,
-//                               fontWeight: FontWeight.w200,
-//                             ),
-//                           ),
-//                           const SizedBox(height: 8.0),
-//                           const TextField(
-//                             decoration: InputDecoration(
-//                               filled: true,
-//                               fillColor: Color(0xFFE6EEF1),
-//                               hintText: 'example@gmail.com',
-//                               border: OutlineInputBorder(
-//                                 borderSide: BorderSide.none,
-//                                 borderRadius:
-//                                     BorderRadius.all(Radius.circular(8.0)),
-//                               ),
-//                             ),
-//                           ),
-//                           const SizedBox(height: 16.0),
-//                           const Text(
-//                             'PASSWORD',
-//                             style: TextStyle(
-//                               color: Colors.black,
-//                               fontWeight: FontWeight.w200,
-//                             ),
-//                           ),
-//                           const SizedBox(height: 8.0),
-//                           const TextField(
-//                             obscureText: true,
-//                             decoration: InputDecoration(
-//                               filled: true,
-//                               fillColor: Color(0xFFE6EEF1),
-//                               hintText: '••••••••',
-//                               border: OutlineInputBorder(
-//                                 borderSide: BorderSide.none,
-//                                 borderRadius:
-//                                     BorderRadius.all(Radius.circular(8.0)),
-//                               ),
-//                               suffixIcon: Icon(Icons.visibility_off),
-//                             ),
-//                           ),
-//                           const SizedBox(height: 16.0),
-//                           const Text(
-//                             'RE-TYPE PASSWORD',
-//                             style: TextStyle(
-//                               color: Colors.black,
-//                               fontWeight: FontWeight.w200,
-//                             ),
-//                           ),
-//                           const SizedBox(height: 8.0),
-//                           const TextField(
-//                             obscureText: true,
-//                             decoration: InputDecoration(
-//                               filled: true,
-//                               fillColor: Color(0xFFE6EEF1),
-//                               hintText: '••••••••',
-//                               border: OutlineInputBorder(
-//                                 borderSide: BorderSide.none,
-//                                 borderRadius:
-//                                     BorderRadius.all(Radius.circular(8.0)),
-//                               ),
-//                               suffixIcon: Icon(Icons.visibility_off),
-//                             ),
-//                           ),
-//                           const SizedBox(
-//                               height:
-//                                   32.0), // Adjusted space for button alignment
-//                           SizedBox(
-//                             width: double.infinity,
-//                             child: ElevatedButton(
-//                               onPressed: () {
-//                                 Navigator.push(
-//                                   context,
-//                                   MaterialPageRoute(
-//                                     builder: (context) {
-//                                       return HomePage();
-//                                     },
-//                                   ),
-//                                 );
-//                               },
-//                               style: ElevatedButton.styleFrom(
-//                                 backgroundColor: Color(0xFFFF742B),
-//                                 padding:
-//                                     const EdgeInsets.symmetric(vertical: 16.0),
-//                                 shape: RoundedRectangleBorder(
-//                                   borderRadius: BorderRadius.circular(8.0),
-//                                 ),
-//                               ),
-//                               child: const Text(
-//                                 'SIGN UP',
-//                                 style: TextStyle(
-//                                   fontSize: 16.0,
-//                                   fontWeight: FontWeight.bold,
-//                                   color: Colors.white,
-//                                 ),
-//                               ),
-//                             ),
-//                           ),
-//                         ],
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
