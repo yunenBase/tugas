@@ -1,6 +1,5 @@
-# tugas
-
-A new Flutter project.
+# Clone Food Delivery App
+clone food delivery app dengan flutter (no backend)
 
 ## Getting Started
 
